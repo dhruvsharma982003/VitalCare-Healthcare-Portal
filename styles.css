@@ -1,0 +1,67 @@
+/* frontend/css/styles.css */
+
+/* Custom Color Palette */
+:root {
+    --primary-color: #4e73df;
+    --secondary-color: #1cc88a;
+    --success-color: #36b9cc;
+    --danger-color: #e74a3b;
+    --warning-color: #f6c23e;
+    --info-color: #858796;
+    --light-color: #f8f9fc;
+    --dark-color: #5a5c69; 
+  }
+   
+  /* Navbar Customization */
+  .navbar {
+    background-color: var(--primary-color) !important;
+  }
+  
+  /* Card Customization */
+  .card-header {
+    background-color: var(--secondary-color) !important;
+    color: #fff;
+  }
+  
+  .card {
+    border: none;
+    border-radius: 15px;
+  }
+  
+  .card.text-white.bg-success {
+    background-color: var(--success-color) !important;
+  }
+  
+  .card.text-white.bg-warning {
+    background-color: var(--warning-color) !important;
+  }
+  
+  .card.text-white.bg-danger {
+    background-color: var(--danger-color) !important;
+  }
+  
+  /* Button Customization */
+  .btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+  }
+  
+  .btn-primary:hover {
+    background-color: #3949ab;
+    border-color: #3949ab;
+  }
+  
+  /* Form Customization */
+  .form-control:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.2rem rgba(78, 115, 223, 0.25);
+  }
+  
+  /* Footer Customization */  
+  footer {
+    background-color: var(--dark-color);
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+  }
+  

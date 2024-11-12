@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointments - Healthcare Portal</title>
+    <!-- Bootstrap CSS -->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+     <!-- Custom CSS -->
+      <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body> 
+    <!-- Navigation Bar -->
+     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Healthcare Portal</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Appointments</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Medical Records</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+     </nav>
+
+     <!-- Main Content -->
+      <div class="container mt-4">
+        <h2>Book an Appointment</h2>
+        <form id="appointmentForm">
+            <div class="mb-3">
+                <label for="doctor" class="form-label">Select Doctor</label>
+                <select class="form-select" name="doctorId" id="doctor" required>
+                    <option selected disabled>Select a doctor</option>
+                    <!-- Dynamically populate doctors -->
+                     <option value="1">Dr. John Doe - Cardiology</option>
+                     <option value="2">Dr. Jane Smith - Dermatology</option>
+                     <!-- Add more doctors as needed -->
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="appointmentDate" class="form-label">Appointment Date</label>
+                <input type="date" class="form-control" id="appointmentDate" name="appointmentDate" required>
+            </div>
+            <div class="mb-3">
+                <label for="appointmentTime" class="form-label">Appointment Time</label>
+                <input type="time" class="form-control" id="appointmentTime" name="appointmentTime" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Book Appointment</button>
+        </form>
+
+        <!-- Appointments List -->
+         <h3 class="mt-5">Your Appointments</h3>
+         <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Doctor</th>
+                    <th>Date</th>
+                    <th>Time</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Dynamically populate appointments -->
+                 <tr>
+                    <td>Dr. John Doe</td>
+                    <td>2024-14-11</td>
+                    <td>10:00 AM</td>
+                    <td>Scheduled</td>
+                    <td>
+                        <button class="btn btn-danger btn-sm">Cancel</button>
+                    </td>
+                 </tr>
+                 <!-- Add more appointments as needed -->
+            </tbody>
+         </table>
+      </div>
+
+      <!-- Bootstrap JS Bundle -->
+       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+       <!-- Custom JS -->
+        <script src="/js/scripts.js"></script>
+</body>
+</html>
